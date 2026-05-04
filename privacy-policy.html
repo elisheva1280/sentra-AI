@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentral AI Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for the Sentral AI React Native mobile app." />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f8fc;
+      --card: #ffffff;
+      --ink: #102033;
+      --muted: #53657a;
+      --line: #dbe7f3;
+      --brand: #045197;
+      --brand-dark: #0f2747;
+      --brand-soft: #e8f3ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--brand-soft), var(--bg) 38%, #ffffff);
+      color: var(--ink);
+      font-family:
+        "Open Sans",
+        "Segoe UI",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    article {
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgb(15 39 71 / 12%);
+    }
+
+    header {
+      padding: clamp(32px, 7vw, 64px);
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 70%, #07172b 100%);
+    }
+
+    header p:first-child {
+      margin: 0 0 10px;
+      color: #b7dcff;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.25rem, 7vw, 4rem);
+      line-height: 1.02;
+    }
+
+    header p:last-child {
+      max-width: 760px;
+      margin: 0;
+      color: #d7eaff;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+
+    .content {
+      padding: clamp(28px, 6vw, 56px);
+    }
+
+    .notice {
+      padding: 18px 20px;
+      margin-bottom: 34px;
+      background: #f7fbff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      color: var(--muted);
+    }
+
+    section {
+      margin: 0 0 38px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--brand-dark);
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: var(--ink);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0 0;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid #b8cce2;
+      border-radius: 999px;
+      background: #f7fbff;
+      color: #254361;
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--brand);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 20px, 960px);
+        padding: 20px 0;
+      }
+
+      article {
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <header>
+        <p>Sentral AI Mobile App</p>
+        <h1>Privacy Policy</h1>
+        <p>
+          This policy explains how information is collected, used, shared, and
+          protected when customers use the Sentral AI React Native mobile app
+          for camera alert and security-system management.
+        </p>
+      </header>
+
+      <div class="content">
+        <div class="notice">
+          <strong>Last Updated:</strong> May 4, 2026.
+          This policy is based on the current mobile app codebase and should
+          be reviewed by business and legal owners before publication.
+        </div>
+
+        <section aria-labelledby="intro">
+          <h2 id="intro">Introduction</h2>
+          <p>
+            Sentral AI provides a customer-facing mobile application for
+            managing connected NVR and camera alert systems. The app lets
+            customers sign in, view connected NVR cameras, manage linked
+            cameras, configure camera alert behavior, set mute schedules,
+            choose detection classes and mask areas, view alert information,
+            and verify a WhatsApp number for alert notifications.
+          </p>
+          <p>
+            This Privacy Policy applies to the Sentral AI mobile app and the
+            customer-facing services that support it. It does not cover
+            separate admin, operator, or internal tools except where those
+            systems are used to provide or support the mobile app service.
+          </p>
+        </section>
+
+        <section aria-labelledby="collect">
+          <h2 id="collect">Information We Collect</h2>
+          <ul>
+            <li>
+              <strong>Account and login data:</strong> email address,
+              credentials submitted during login (processed securely via authentication provider), customer/user ID,
+              display name, organization/account ID, and active user
+              selection. The app also uses email for password reset flows.
+            </li>
+            <li>
+              <strong>Authentication and session data:</strong> AWS Cognito
+              user identifiers, access/ID tokens, refresh tokens, token
+              refresh state, and session data. The mobile app stores the
+              active session in the device secure keychain.
+            </li>
+            <li>
+              <strong>Phone and WhatsApp data:</strong> a WhatsApp phone
+              number when the customer enters one for verification, a
+              WhatsApp link token, the destination WhatsApp instance phone
+              returned by the backend, and confirmation status received after
+              verification.
+            </li>
+            <li>
+              <strong>Camera and NVR data:</strong> NVR/site names,
+              manufacturer, model, serial number, device type, IP address,
+              secondary IP address when provided, HTTP/RTSP ports, username,
+              password, channels, interested channels, linked camera IDs,
+              camera names, camera type, device/network/access/alert status,
+              organization ID, client ID, and setup draft progress.
+            </li>
+            <li>
+              <strong>Alert, detection, and configuration data:</strong>
+              notification and event records, alert messages, event times, NVR
+              event times, severity/status, viewed/resolved metadata,
+              detection classes, selected detection class IDs, confidence
+              values, bounding boxes, tags, mute state, temporary inactive
+              periods, weekly mute schedules, time zones, and camera mask
+              polygons or regions configured by the customer.
+            </li>
+            <li>
+              <strong>Camera images, snapshots, and event media:</strong> the
+              app can load and display camera preview image URLs and
+              last-snapshot URLs returned by the backend. Notification and
+              event DTOs also include snapshot image IDs, temporary image
+              URLs, and event/video media identifiers where available. The
+              current Android app manifest does not request access to the
+              phone camera, microphone, contacts, or photos.
+            </li>
+            <li>
+              <strong>Device, network, and diagnostics data:</strong> request
+              metadata needed for API communication, timestamps, network
+              errors, authentication errors, connection errors, and
+              development or server-side diagnostic logs.
+              The app does not use advertising technologies, analytics SDKs, crash-reporting SDKs, or cross-app tracking mechanisms.
+            </li>
+          </ul>
+          <div class="chips" aria-label="Data category summary">
+            <span class="chip">Account</span>
+            <span class="chip">Authentication</span>
+            <span class="chip">Email</span>
+            <span class="chip">Phone / WhatsApp</span>
+            <span class="chip">Camera / NVR</span>
+            <span class="chip">Snapshots / Event Media</span>
+            <span class="chip">Notifications</span>
+            <span class="chip">Schedules / Mute Windows</span>
+            <span class="chip">Detection Masks</span>
+            <span class="chip">Operational Diagnostics</span>
+          </div>
+        </section>
+
+        <section aria-labelledby="use">
+          <h2 id="use">How We Use Information</h2>
+          <ul>
+            <li>Authenticate users, maintain sessions, and protect account access.</li>
+            <li>Create, link, or validate customer profiles and organization access.</li>
+            <li>Display customer NVRs, cameras, linked cameras, camera status, and camera preview images.</li>
+            <li>Connect, scan, activate, sync, and manage NVRs and related camera channels.</li>
+            <li>Save customer configuration choices, including linked cameras, interested channels, detection classes,
+              camera masks, mute schedules, temporary mute windows, and NVR setup drafts.</li>
+            <li>List and display notifications, alerts, event records, snapshots, and available event media.</li>
+            <li>Verify WhatsApp numbers and send customers to WhatsApp to complete alert-notification setup.</li>
+            <li>Operate, secure, troubleshoot, and improve the reliability of the app and supporting services.</li>
+            <li>Respond to support inquiries, including NVR setup and connection diagnostics submitted by the customer.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="sharing">
+          <h2 id="sharing">Sharing With Service Providers</h2>
+          <p>
+            We do not sell personal information or use the mobile app code to
+            add advertising or cross-app tracking. We may share information
+            with service providers only as needed to operate, secure, and
+            support the app and alert service.
+          </p>
+          <ul>
+            <li>
+              <strong>AWS Cognito:</strong> used for authentication,
+              password reset, token issuance, and token refresh.
+            </li>
+            <li>
+              <strong>Sentral backend API:</strong> the production mobile app
+              communicates with <a href="https://api.x-sentral.com">https://api.x-sentral.com</a>
+              to load and update customer profile, camera, NVR, notification,
+              schedule, detection, mask, event, and WhatsApp-linking data.
+            </li>
+            <li>
+              <strong>WhatsApp:</strong> when WhatsApp verification is used,
+              the app opens WhatsApp with a verification token and the backend
+              processes the result so alert notifications can be delivered to
+              the verified number.
+            </li>
+            <li>
+              <strong>Cloud storage and media services:</strong> camera
+              snapshots, preview URLs, temporary media URLs, and event media
+              may be processed or stored by backend/cloud services that support
+              the Sentral alert platform.
+            </li>
+            <li>
+              <strong>NVR and camera integration services:</strong> camera
+              and NVR connection details may be processed by backend services
+              that connect to supported NVR devices and retrieve device,
+              channel, status, snapshot, or alert information.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="security">
+          <h2 id="security">Data Security</h2>
+          <p>
+            We use technical and organizational safeguards designed to protect
+            information against unauthorized access, loss, misuse, or
+            alteration. Authentication is handled through AWS Cognito,
+            authenticated API requests use bearer tokens, and the mobile app
+            stores session data in the device secure keychain.
+          </p>
+          <p>
+            No method of transmission or storage is completely secure. This
+            policy does not claim independent security certification, HIPAA,
+            SOC 2, ISO, or GDPR certification.
+          </p>
+        </section>
+
+        <section aria-labelledby="retention">
+          <h2 id="retention">Data Retention</h2>
+          <p>
+            We retain account, authentication, device, configuration, alert,
+            media, and diagnostic information for as long as needed to provide
+            the service, keep customer security records, troubleshoot issues,
+            comply with legal or contractual obligations, and protect the
+            integrity of the platform.
+          </p>
+          <p>
+            Some information, such as alert history, snapshots, event media,
+            audit or diagnostic logs, WhatsApp verification or delivery
+            metadata, NVR setup drafts, and support inquiries, may be retained
+            after a session ends or after a device is disconnected when needed
+            for security, operational, legal, billing, or dispute-resolution
+            purposes.
+          </p>
+          <p>
+            Retention periods depend on the type of data and operational requirements.
+          </p>
+        </section>
+
+        <section aria-labelledby="rights">
+          <h2 id="rights">User Rights and Deletion Requests</h2>
+          <p>
+            Customers may request access, correction, deactivation, or deletion
+            of account information, subject to identity verification and any
+            retention required for security, operations, legal obligations, or
+            service records.
+          </p>
+          <p>
+            To request deletion or changes, contact your organization
+            administrator or the Sentral AI support contact provided with your
+            service agreement. Include the email address used to sign in and
+            enough information for us to identify the correct customer account.
+          </p>
+        </section>
+
+        <section aria-labelledby="children">
+          <h2 id="children">Children's Privacy</h2>
+          <p>
+            The app is not intended for children under 13. We do not knowingly
+            collect personal information from children under 13. If you believe
+            a child under 13 has provided information through the app, contact
+            us so we can review and delete it where appropriate.
+          </p>
+        </section>
+
+        <section aria-labelledby="contact">
+          <h2 id="contact">Contact</h2>
+          <p>
+            For privacy questions, data requests, or account deletion, you can contact us at:
+          </p>
+
+          <p>
+            Email: <a href="mailto:support@app-bizz.com">support@app-bizz.com</a><br />
+            Phone: <a href="tel:+972548047747">054-804-7747</a>
+          </p>
+
+          <p>
+            We will respond within a reasonable timeframe in accordance with applicable laws and service obligations.
+          </p>
+          <p>
+            Production API service referenced by the mobile app:
+            <a href="https://api.x-sentral.com">https://api.x-sentral.com</a>.
+          </p>
+        </section>
+
+        <footer>
+          <span>Last Updated: May 4, 2026</span>
+          <span>Sentral AI Mobile App Privacy Policy</span>
+        </footer>
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>
