@@ -214,8 +214,9 @@
         <div class="content">
           <div class="notice">
             <strong>Last Updated:</strong> May 4, 2026.
-            This policy is based on the current mobile app codebase and should
-            be reviewed by business and legal owners before publication.
+            This Privacy Policy describes how Sentral AI handles information when you use the mobile app.
+            For account deletion instructions, see the
+            <a href="./delete-account.html">Account Deletion Request</a> page.
           </div>
 
           <section aria-labelledby="intro">
@@ -288,7 +289,7 @@
                 <strong>Device, network, and diagnostics data:</strong> request
                 metadata needed for API communication, timestamps, network
                 errors, authentication errors, connection errors, and
-                development or server-side diagnostic logs.
+                development or server-side diagnostic and security logs associated with operating the platform.
                 The app does not use advertising technologies, analytics SDKs, crash-reporting SDKs, or cross-app tracking mechanisms.
               </li>
             </ul>
@@ -304,6 +305,22 @@
               <span class="chip">Detection Masks</span>
               <span class="chip">Operational Diagnostics</span>
             </div>
+          </section>
+
+          <section aria-labelledby="datasafety">
+            <h2 id="datasafety">Google Play Data Safety (summary)</h2>
+            <p>
+              The categories below summarize types of information the service may collect or process depending on how you use Sentral AI. They are provided to align app store disclosures with this policy.
+            </p>
+            <ul>
+              <li>Email address and account identifiers</li>
+              <li>Phone / WhatsApp number when you use WhatsApp verification</li>
+              <li>App interactions, settings, and configuration (including schedules, mute windows, detection preferences, and masks)</li>
+              <li>Camera and NVR configuration and operational status fields</li>
+              <li>Snapshots, preview URLs, and event or alert media references where available</li>
+              <li>Diagnostics and operational logs on the device and on servers supporting the service (such as API, security, and troubleshooting logs)</li>
+            </ul>
+            <p>This summary does not replace the fuller descriptions elsewhere in this policy.</p>
           </section>
 
           <section aria-labelledby="use">
@@ -361,6 +378,28 @@
                 channel, status, snapshot, or alert information.
               </li>
             </ul>
+            <p><strong>In plain language,</strong> how providers fit together:</p>
+            <ul>
+              <li>
+                <strong>AWS Cognito</strong> processes authentication data and identifiers needed to operate sign-in,
+                password reset, and token issuance.
+              </li>
+              <li>
+                The <strong>Sentral backend</strong> processes app, account, NVR/camera,
+                configuration, alert, WhatsApp linking, and related operational data described in “Information We Collect.”
+              </li>
+              <li>
+                <strong>WhatsApp</strong> may receive your phone number and the verification-related content when you initiate verification from the app.
+              </li>
+              <li>
+                <strong>Cloud storage and media services</strong> may process snapshots,
+                preview URLs, temporary media URLs, and event or alert-related media identifiers as part of the platform.
+              </li>
+            </ul>
+            <p>
+              Data may be processed in countries where service providers operate. Where applicable law requires safeguards for international transfers,
+              we use contractual and organizational measures that align with legal requirements relevant to how we operate the service.
+            </p>
           </section>
 
           <section aria-labelledby="security">
@@ -371,6 +410,14 @@
               alteration. Authentication is handled through AWS Cognito,
               authenticated API requests use bearer tokens, and the mobile app
               stores session data in the device secure keychain.
+            </p>
+            <p>
+              <strong>Sensitive operational and security data.</strong> NVR credentials, IP addresses and ports, camera/NVR configuration, and snapshots or event-related media handled by the platform are treated as sensitive. Access is limited to authorized systems and personnel as needed to operate, support, maintain security, troubleshoot, protect customers, and ensure platform integrity.
+            </p>
+            <p>
+              Data transmitted between the mobile app and Sentral APIs is protected in transit using HTTPS (TLS).
+              Session tokens are stored using the mobile platform’s secure credential storage capabilities (secure keychain or equivalent).
+              We do not state here that all information is uniformly encrypted at rest in every subsystem; safeguards depend on infrastructure and retention context.
             </p>
             <p>
               No method of transmission or storage is completely secure. This
@@ -404,16 +451,20 @@
           <section aria-labelledby="rights">
             <h2 id="rights">User Rights and Deletion Requests</h2>
             <p>
-              Customers may request access, correction, deactivation, or deletion
-              of account information, subject to identity verification and any
-              retention required for security, operations, legal obligations, or
-              service records.
+              Where applicable privacy laws grant rights, customers may request access, correction,
+              deactivation, or deletion of personal information associated with the account,
+              subject to verified identity where required and lawful exceptions (including retention needed for security,
+              legal obligations, contractual or billing obligations, dispute resolution, or continued operation of our services).
             </p>
             <p>
-              To request deletion or changes, contact your organization
-              administrator or the Sentral AI support contact provided with your
-              service agreement. Include the email address used to sign in and
-              enough information for us to identify the correct customer account.
+              <strong>How you can request account deletion:</strong> (1) In the Sentral AI mobile app, open <strong>Settings → Delete Account</strong> while signed in;
+              (2) use our public <a href="./delete-account.html">Account Deletion Request</a> page or email workflow;
+              or (3) email <a href="mailto:support@app-bizz.com">support@app-bizz.com</a>, including the email address you use to sign in.
+              Organizations that manage tenant access should also coordinate with internal administrators where applicable.
+            </p>
+            <p>
+              <strong>Processing timeframe.</strong> We aim to process verified deletion requests within 30 days, unless a longer period is required or permitted by law,
+              security, contractual, billing, dispute-resolution, or operational obligations.
             </p>
           </section>
 
@@ -430,7 +481,9 @@
           <section aria-labelledby="contact">
             <h2 id="contact">Contact</h2>
             <p>
-              For privacy questions, data requests, or account deletion, you can contact us at:
+              For privacy questions, data requests, or account deletion, you can contact us using the details below.
+              For deletion, you may also use <strong>Settings → Delete Account</strong> in the app or the
+              <a href="./delete-account.html">Account Deletion Request</a> page.
             </p>
 
             <p>
