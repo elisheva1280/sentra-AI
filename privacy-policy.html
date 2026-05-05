@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy Policy for the Sentral AI React Native mobile app." />
-  <title>Privacy Policy — Sentral AI</title>
+  <meta name="description" content="Privacy Policy for the Sentra AI mobile app." />
+  <title>Privacy Policy — Sentra AI</title>
   <style>
     :root {
       color-scheme: dark;
@@ -196,17 +196,17 @@
 <body>
   <div class="wrap">
     <nav class="site-nav" aria-label="Site navigation">
-      <a href="./index.html">← Sentral AI Legal Pages</a>
+      <a href="./index.html">← Sentra AI Legal Pages</a>
     </nav>
 
     <main>
       <article>
         <header class="doc-header">
-          <p>Sentral AI Mobile App</p>
+          <p>Sentra AI Mobile App</p>
           <h1>Privacy Policy</h1>
           <p>
             This policy explains how information is collected, used, shared, and
-            protected when customers use the Sentral AI React Native mobile app
+            protected when customers use the Sentra AI mobile app
             for camera alert and security-system management.
           </p>
         </header>
@@ -214,7 +214,7 @@
         <div class="content">
           <div class="notice">
             <strong>Last Updated:</strong> May 4, 2026.
-            This Privacy Policy describes how Sentral AI handles information when you use the mobile app.
+            This Privacy Policy describes how Sentra AI handles information when you use the mobile app.
             For account deletion instructions, see the
             <a href="./delete-account.html">Account Deletion Request</a> page.
           </div>
@@ -222,7 +222,7 @@
           <section aria-labelledby="intro">
             <h2 id="intro">Introduction</h2>
             <p>
-              Sentral AI provides a customer-facing mobile application for
+              Sentra AI provides a customer-facing mobile application for
               managing connected NVR and camera alert systems. The app lets
               customers sign in, view connected NVR cameras, manage linked
               cameras, configure camera alert behavior, set mute schedules,
@@ -230,7 +230,7 @@
               and verify a WhatsApp number for alert notifications.
             </p>
             <p>
-              This Privacy Policy applies to the Sentral AI mobile app and the
+              This Privacy Policy applies to the Sentra AI mobile app and the
               customer-facing services that support it. It does not cover
               separate admin, operator, or internal tools except where those
               systems are used to provide or support the mobile app service.
@@ -242,7 +242,7 @@
             <ul>
               <li>
                 <strong>Account and login data:</strong> email address,
-                credentials submitted during login (processed securely via authentication provider), customer/user ID,
+                credentials submitted during login (processed via AWS Cognito, not stored by the application), customer/user ID,
                 display name, organization/account ID, and active user
                 selection. The app also uses email for password reset flows.
               </li>
@@ -254,18 +254,25 @@
               </li>
               <li>
                 <strong>Phone and WhatsApp data:</strong> a WhatsApp phone
-                number when the customer enters one for verification, a
-                WhatsApp link token, the destination WhatsApp instance phone
-                returned by the backend, and confirmation status received after
-                verification.
+                number when the customer voluntarily enters one to set up alert
+                notifications, a WhatsApp link token, the destination WhatsApp
+                instance phone returned by the backend, and confirmation status
+                received after verification. WhatsApp verification is initiated
+                entirely by the user — the app does not access contacts, send
+                unsolicited messages, or submit the phone number to WhatsApp
+                without explicit user action.
               </li>
               <li>
-                <strong>Camera and NVR data:</strong> NVR/site names,
+                <strong>Camera and NVR connection data:</strong> NVR/site names,
                 manufacturer, model, serial number, device type, IP address,
-                secondary IP address when provided, HTTP/RTSP ports, username,
-                password, channels, interested channels, linked camera IDs,
+                secondary IP address when provided, HTTP/RTSP ports, device
+                username and password required to connect to the NVR,
+                channels, interested channels, linked camera IDs,
                 camera names, camera type, device/network/access/alert status,
                 organization ID, client ID, and setup draft progress.
+                This connection data is stored on the Sentra AI backend and
+                used solely to operate, connect, and manage the customer's
+                NVR and camera system.
               </li>
               <li>
                 <strong>Alert, detection, and configuration data:</strong>
@@ -280,17 +287,19 @@
                 <strong>Camera images, snapshots, and event media:</strong> the
                 app can load and display camera preview image URLs and
                 last-snapshot URLs returned by the backend. Notification and
-                event DTOs also include snapshot image IDs, temporary image
+                event records also include snapshot image IDs, temporary image
                 URLs, and event/video media identifiers where available. The
-                current Android app manifest does not request access to the
-                phone camera, microphone, contacts, or photos.
+                app does not request access to the phone camera, microphone,
+                contacts, or local photo library.
               </li>
               <li>
-                <strong>Device, network, and diagnostics data:</strong> request
-                metadata needed for API communication, timestamps, network
-                errors, authentication errors, connection errors, and
-                development or server-side diagnostic and security logs associated with operating the platform.
-                The app does not use advertising technologies, analytics SDKs, crash-reporting SDKs, or cross-app tracking mechanisms.
+                <strong>Operational and diagnostic data:</strong> technical
+                information generated during API communication, including
+                request metadata, timestamps, error types, authentication
+                errors, and connection error details. These logs are used
+                solely for troubleshooting, security, and service reliability.
+                The app does not use advertising technologies, analytics SDKs,
+                crash-reporting SDKs, or cross-app tracking.
               </li>
             </ul>
             <div class="chips" aria-label="Data category summary">
@@ -308,19 +317,21 @@
           </section>
 
           <section aria-labelledby="datasafety">
-            <h2 id="datasafety">Google Play Data Safety (summary)</h2>
+            <h2 id="datasafety">Data Safety Summary</h2>
             <p>
-              The categories below summarize types of information the service may collect or process depending on how you use Sentral AI. They are provided to align app store disclosures with this policy.
+              The categories below summarize types of information the service may collect or process depending on how you use Sentra AI. This summary aligns app store data safety disclosures with this policy.
             </p>
             <ul>
-              <li>Email address and account identifiers</li>
-              <li>Phone / WhatsApp number when you use WhatsApp verification</li>
-              <li>App interactions, settings, and configuration (including schedules, mute windows, detection preferences, and masks)</li>
-              <li>Camera and NVR configuration and operational status fields</li>
-              <li>Snapshots, preview URLs, and event or alert media references where available</li>
-              <li>Diagnostics and operational logs on the device and on servers supporting the service (such as API, security, and troubleshooting logs)</li>
+              <li><strong>Account information:</strong> email address, account/user IDs, display name, organization ID</li>
+              <li><strong>Phone / WhatsApp number:</strong> only if you use the WhatsApp alert-notification feature</li>
+              <li><strong>Camera and NVR configuration:</strong> device connection details, camera settings, detection preferences, schedules, mute windows, and masks</li>
+              <li><strong>Snapshots and event media:</strong> preview URLs, event image identifiers, and temporary media URLs where available</li>
+              <li><strong>App interactions and settings:</strong> in-app navigation, configuration changes, and feature usage</li>
+              <li><strong>Operational and diagnostic data:</strong> API request metadata, error types, timestamps, and related technical logs used for troubleshooting and security</li>
             </ul>
-            <p>This summary does not replace the fuller descriptions elsewhere in this policy.</p>
+            <p>
+              We do not sell personal information, use data for advertising purposes, or engage in cross-app tracking. The app does not include advertising SDKs, analytics profiling tools, or cross-device tracking mechanisms.
+            </p>
           </section>
 
           <section aria-labelledby="use">
@@ -333,118 +344,74 @@
               <li>Save customer configuration choices, including linked cameras, interested channels, detection classes,
                 camera masks, mute schedules, temporary mute windows, and NVR setup drafts.</li>
               <li>List and display notifications, alerts, event records, snapshots, and available event media.</li>
-              <li>Verify WhatsApp numbers and send customers to WhatsApp to complete alert-notification setup.</li>
+              <li>Send WhatsApp alert notifications to the phone number the user explicitly verified — only when the user initiates the WhatsApp verification flow.</li>
               <li>Operate, secure, troubleshoot, and improve the reliability of the app and supporting services.</li>
-              <li>Respond to support inquiries, including NVR setup and connection diagnostics submitted by the customer.
-              </li>
+              <li>Respond to support inquiries, including NVR setup and connection diagnostics submitted by the customer.</li>
             </ul>
           </section>
 
           <section aria-labelledby="sharing">
             <h2 id="sharing">Sharing With Service Providers</h2>
             <p>
-              We do not sell personal information or use the mobile app code to
-              add advertising or cross-app tracking. We may share information
-              with service providers only as needed to operate, secure, and
-              support the app and alert service.
+              We do not sell personal information, use data for advertising purposes, or engage in cross-app tracking.
+              We share information with service providers only as necessary to operate, secure, and support the app and alert service.
             </p>
             <ul>
               <li>
-                <strong>AWS Cognito:</strong> used for authentication,
-                password reset, token issuance, and token refresh.
+                <strong>AWS Cognito:</strong> processes user authentication credentials, password reset flows, and issues the tokens used to authorize API requests. User account passwords are managed entirely by Cognito and are not stored or processed by the Sentra AI application itself.
               </li>
               <li>
-                <strong>Sentral backend API:</strong> the production mobile app
-                communicates with <a href="https://api.x-sentral.com">https://api.x-sentral.com</a>
-                to load and update customer profile, camera, NVR, notification,
-                schedule, detection, mask, event, and WhatsApp-linking data.
+                <strong>Sentra AI backend API</strong> (<a href="https://api.x-sentral.com">api.x-sentral.com</a>):
+                processes customer profile, camera, NVR, notification, schedule, detection, mask, event, WhatsApp-linking, and related operational data as described in this policy.
               </li>
               <li>
-                <strong>WhatsApp:</strong> when WhatsApp verification is used,
-                the app opens WhatsApp with a verification token and the backend
-                processes the result so alert notifications can be delivered to
-                the verified number.
+                <strong>WhatsApp / Green API:</strong> when you choose to set up WhatsApp alert notifications, the app opens WhatsApp with a pre-prepared message. Your phone number is only submitted as part of this flow when you explicitly initiate it. The WhatsApp verification is entirely user-initiated — no phone number is shared without your direct action.
               </li>
               <li>
-                <strong>Cloud storage and media services:</strong> camera
-                snapshots, preview URLs, temporary media URLs, and event media
-                may be processed or stored by backend/cloud services that support
-                the Sentral alert platform.
+                <strong>AWS S3 (cloud media storage):</strong> camera snapshots, preview URLs, temporary media URLs, and event media files may be stored in or served from AWS S3 buckets managed as part of the Sentra AI platform.
               </li>
               <li>
-                <strong>NVR and camera integration services:</strong> camera
-                and NVR connection details may be processed by backend services
-                that connect to supported NVR devices and retrieve device,
-                channel, status, snapshot, or alert information.
-              </li>
-            </ul>
-            <p><strong>In plain language,</strong> how providers fit together:</p>
-            <ul>
-              <li>
-                <strong>AWS Cognito</strong> processes authentication data and identifiers needed to operate sign-in,
-                password reset, and token issuance.
-              </li>
-              <li>
-                The <strong>Sentral backend</strong> processes app, account, NVR/camera,
-                configuration, alert, WhatsApp linking, and related operational data described in “Information We Collect.”
-              </li>
-              <li>
-                <strong>WhatsApp</strong> may receive your phone number and the verification-related content when you initiate verification from the app.
-              </li>
-              <li>
-                <strong>Cloud storage and media services</strong> may process snapshots,
-                preview URLs, temporary media URLs, and event or alert-related media identifiers as part of the platform.
+                <strong>NVR and camera integration services:</strong> camera and NVR connection details are processed by backend services that connect to your NVR device to retrieve device status, channel lists, snapshots, and alert data.
               </li>
             </ul>
             <p>
-              Data may be processed in countries where service providers operate. Where applicable law requires safeguards for international transfers,
-              we use contractual and organizational measures that align with legal requirements relevant to how we operate the service.
+              Data may be processed in countries where these service providers operate.
+              Where applicable laws require safeguards for international data transfers, we rely on contractual and organizational measures consistent with those requirements.
             </p>
           </section>
 
           <section aria-labelledby="security">
             <h2 id="security">Data Security</h2>
             <p>
-              We use technical and organizational safeguards designed to protect
-              information against unauthorized access, loss, misuse, or
-              alteration. Authentication is handled through AWS Cognito,
-              authenticated API requests use bearer tokens, and the mobile app
-              stores session data in the device secure keychain.
+              We implement technical and organizational safeguards to protect information against unauthorized access, loss, misuse, or alteration.
             </p>
+            <ul>
+              <li><strong>Authentication:</strong> all API requests require a valid bearer token issued by AWS Cognito using RS256 JWT signing. Access is enforced by role-based authorization (customer, operator, admin).</li>
+              <li><strong>Data in transit:</strong> all communication between the mobile app and Sentra AI APIs uses HTTPS (TLS). The production API endpoint is served exclusively over HTTPS.</li>
+              <li><strong>Session storage:</strong> session tokens on the mobile device are stored in the platform's secure keychain (or equivalent secure credential storage).</li>
+              <li><strong>Sensitive device data:</strong> NVR connection credentials, IP addresses, ports, and camera configuration are treated as sensitive operational data. Access is restricted to authorized system services and personnel required to operate, support, or maintain the service. This data is not logged in plaintext in diagnostic outputs.</li>
+              <li><strong>User account credentials:</strong> user login passwords are managed entirely by AWS Cognito and are never received, stored, or processed by the Sentra AI application backend.</li>
+            </ul>
             <p>
-              <strong>Sensitive operational and security data.</strong> NVR credentials, IP addresses and ports, camera/NVR configuration, and snapshots or event-related media handled by the platform are treated as sensitive. Access is limited to authorized systems and personnel as needed to operate, support, maintain security, troubleshoot, protect customers, and ensure platform integrity.
-            </p>
-            <p>
-              Data transmitted between the mobile app and Sentral APIs is protected in transit using HTTPS (TLS).
-              Session tokens are stored using the mobile platform’s secure credential storage capabilities (secure keychain or equivalent).
-              We do not state here that all information is uniformly encrypted at rest in every subsystem; safeguards depend on infrastructure and retention context.
-            </p>
-            <p>
-              No method of transmission or storage is completely secure. This
-              policy does not claim independent security certification, HIPAA,
-              SOC 2, ISO, or GDPR certification.
+              We do not claim application-level encryption at rest across all data subsystems, as storage-level protections depend on infrastructure configuration. No security measure is completely foolproof — no method of transmission or storage is 100% secure. This policy does not claim HIPAA, SOC 2, ISO, or GDPR certification.
             </p>
           </section>
 
           <section aria-labelledby="retention">
             <h2 id="retention">Data Retention</h2>
             <p>
-              We retain account, authentication, device, configuration, alert,
-              media, and diagnostic information for as long as needed to provide
-              the service, keep customer security records, troubleshoot issues,
-              comply with legal or contractual obligations, and protect the
-              integrity of the platform.
+              We retain different categories of data for different periods depending on operational, security, legal, and contractual requirements. In general:
             </p>
+            <ul>
+              <li><strong>Account and profile data</strong> is retained while the account is active and for a period after deletion sufficient to satisfy security, contractual, legal, or billing obligations.</li>
+              <li><strong>NVR and camera configuration data</strong> is retained while the device is associated with the account and may remain in logs or backup records for operational or security purposes after removal.</li>
+              <li><strong>Alert, event, and notification records</strong> may be retained for security review, fraud prevention, dispute resolution, or compliance purposes beyond the lifetime of an active alert.</li>
+              <li><strong>Diagnostic and operational logs</strong> are retained for the period needed to troubleshoot issues, investigate incidents, and maintain platform security and integrity.</li>
+              <li><strong>WhatsApp verification metadata</strong> is retained while the number is linked and may remain in operational records after it is unlinked.</li>
+              <li><strong>Support inquiries</strong> are retained for the period needed to resolve the inquiry and for any applicable record-keeping obligations.</li>
+            </ul>
             <p>
-              Some information, such as alert history, snapshots, event media,
-              audit or diagnostic logs, WhatsApp verification or delivery
-              metadata, NVR setup drafts, and support inquiries, may be retained
-              after a session ends or after a device is disconnected when needed
-              for security, operational, legal, billing, or dispute-resolution
-              purposes.
-            </p>
-            <p>
-              Retention periods depend on the type of data and operational requirements.
+              Specific retention durations are not published here because they depend on the nature of the data and applicable legal, contractual, or operational requirements. We do not retain data longer than necessary for these purposes.
             </p>
           </section>
 
@@ -457,14 +424,16 @@
               legal obligations, contractual or billing obligations, dispute resolution, or continued operation of our services).
             </p>
             <p>
-              <strong>How you can request account deletion:</strong> (1) In the Sentral AI mobile app, open <strong>Settings → Delete Account</strong> while signed in;
-              (2) use our public <a href="./delete-account.html">Account Deletion Request</a> page or email workflow;
-              or (3) email <a href="mailto:support@app-bizz.com">support@app-bizz.com</a>, including the email address you use to sign in.
-              Organizations that manage tenant access should also coordinate with internal administrators where applicable.
+              <strong>How to request account deletion:</strong>
             </p>
+            <ul>
+              <li>In the Sentra AI mobile app, open <strong>Settings → Delete Account</strong> while signed in — this submits a routed deletion request through your authenticated profile.</li>
+              <li>Use the public <a href="./delete-account.html">Account Deletion Request</a> page or email workflow.</li>
+              <li>Email <a href="mailto:support@app-bizz.com">support@app-bizz.com</a>, including the email address you use to sign in.</li>
+            </ul>
             <p>
               <strong>Processing timeframe.</strong> We aim to process verified deletion requests within 30 days, unless a longer period is required or permitted by law,
-              security, contractual, billing, dispute-resolution, or operational obligations.
+              security obligations, contractual requirements, billing records, dispute resolution, or operational necessity.
             </p>
           </section>
 
@@ -481,8 +450,8 @@
           <section aria-labelledby="contact">
             <h2 id="contact">Contact</h2>
             <p>
-              For privacy questions, data requests, or account deletion, you can contact us using the details below.
-              For deletion, you may also use <strong>Settings → Delete Account</strong> in the app or the
+              For privacy questions, data requests, or account deletion, contact us using the details below.
+              For deletion you may also use <strong>Settings → Delete Account</strong> in the app or the
               <a href="./delete-account.html">Account Deletion Request</a> page.
             </p>
 
@@ -494,15 +463,11 @@
             <p>
               We will respond within a reasonable timeframe in accordance with applicable laws and service obligations.
             </p>
-            <p>
-              Production API service referenced by the mobile app:
-              <a href="https://api.x-sentral.com">https://api.x-sentral.com</a>.
-            </p>
           </section>
 
           <footer class="doc-footer">
             <span>Last Updated: May 4, 2026</span>
-            <span>Sentral AI Mobile App Privacy Policy</span>
+            <span>Sentra AI Mobile App Privacy Policy</span>
           </footer>
         </div>
       </article>
