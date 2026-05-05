@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,6 +7,7 @@
   <title>Account Deletion Request — Sentral AI</title>
   <style>
     :root {
+      color-scheme: dark;
       --bg: #0a0d12;
       --surface: #121822;
       --surface-2: #1a2230;
@@ -17,23 +17,15 @@
       --accent: #38bdf8;
       --accent-dim: rgba(56, 189, 248, 0.15);
       --focus: #f472b6;
-      --error: #fb7185;
-      --success: #34d399;
       --radius: 14px;
       --shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
       --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       --max: 42rem;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -55,9 +47,7 @@
       text-underline-offset: 3px;
     }
 
-    a:hover {
-      color: #7dd3fc;
-    }
+    a:hover { color: #7dd3fc; }
 
     a:focus-visible {
       outline: 2px solid var(--focus);
@@ -68,11 +58,24 @@
     .wrap {
       max-width: calc(var(--max) + 3rem);
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 4rem;
+      padding: 1rem 1.25rem 4rem;
     }
 
+    .site-nav {
+      margin-bottom: 1rem;
+      padding: 0.5rem 0;
+    }
+
+    .site-nav a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover { text-decoration: underline; }
+
     header.hero {
-      padding: 2.5rem 0 1.5rem;
+      padding: 1.5rem 0 1.5rem;
       border-bottom: 1px solid var(--border);
       margin-bottom: 2rem;
     }
@@ -101,7 +104,7 @@
     .lede {
       color: var(--muted);
       font-size: 1.05rem;
-      max-width: 38ch;
+      max-width: 40ch;
       margin: 0;
     }
 
@@ -115,10 +118,11 @@
     }
 
     .panel h2 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 600;
       margin: 0 0 1rem;
       letter-spacing: -0.02em;
+      color: var(--text);
     }
 
     .panel p,
@@ -127,18 +131,15 @@
       font-size: 0.95rem;
     }
 
-    .panel p:last-child {
-      margin-bottom: 0;
-    }
+    .panel p:last-child { margin-bottom: 0; }
 
-    .panel ul {
+    .panel ul,
+    .panel ol {
       margin: 0.5rem 0 0;
-      padding-left: 1.25rem;
+      padding-left: 1.35rem;
     }
 
-    .panel li {
-      margin-bottom: 0.5rem;
-    }
+    .panel li { margin-bottom: 0.55rem; }
 
     .notice {
       border-left: 3px solid var(--accent);
@@ -150,390 +151,136 @@
       color: var(--muted);
     }
 
-    .notice strong {
-      color: var(--text);
-    }
+    .notice strong { color: var(--text); }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
-    }
-
-    label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .hint {
-      font-size: 0.8rem;
-      font-weight: 400;
-      text-transform: none;
-      letter-spacing: 0;
-      color: var(--muted);
-      opacity: 0.85;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea {
-      width: 100%;
-      padding: 0.75rem 0.9rem;
-      font: inherit;
-      color: var(--text);
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: rgba(148, 163, 184, 0.55);
-    }
-
-    input:focus-visible,
-    textarea:focus-visible {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-dim);
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    button[type="submit"] {
-      margin-top: 0.25rem;
-      appearance: none;
-      font: inherit;
-      font-weight: 600;
-      cursor: pointer;
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.75rem;
       padding: 0.9rem 1.25rem;
-      border: none;
       border-radius: 12px;
-      color: #0a0d12;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0a0d12 !important;
+      text-decoration: none !important;
       background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #22d3ee 100%);
       box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
-      transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.15s ease;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
     }
 
-    button[type="submit"]:hover:not(:disabled) {
+    .cta:hover {
       transform: translateY(-1px);
       box-shadow: 0 12px 28px rgba(56, 189, 248, 0.45);
+      color: #0a0d12 !important;
     }
 
-    button[type="submit"]:focus-visible {
+    .cta:focus-visible {
       outline: 2px solid var(--focus);
       outline-offset: 3px;
     }
 
-    button[type="submit"]:disabled {
-      opacity: 0.55;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .status {
-      padding: 1rem 1.1rem;
-      border-radius: 10px;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-
-    .status[hidden] {
-      display: none !important;
-    }
-
-    .status.error {
-      border: 1px solid rgba(251, 113, 133, 0.35);
-      background: rgba(251, 113, 133, 0.08);
-      color: #fecdd3;
-    }
-
-    .status.success {
-      border: 1px solid rgba(52, 211, 153, 0.35);
-      background: rgba(52, 211, 153, 0.08);
-      color: #a7f3d0;
-    }
-
-    .status.loading {
-      border: 1px solid var(--border);
-      background: rgba(56, 189, 248, 0.08);
-      color: var(--muted);
-    }
-
-    .fallback {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .fallback a.tel {
-      white-space: nowrap;
-    }
-
-    .mono-block {
-      margin-top: 0.75rem;
-      padding: 0.85rem;
-      font-size: 0.78rem;
-      line-height: 1.45;
-      font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", Consolas, monospace;
-      color: #cbd5e1;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 8px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
     footer.meta {
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--muted);
     }
 
-    @media (min-width: 480px) {
-      .wrap {
-        padding-left: 1.75rem;
-        padding-right: 1.75rem;
-      }
+    footer.meta p { margin: 0.35rem 0; }
 
-      .panel {
-        padding: 1.75rem 1.6rem;
-      }
+    @media (min-width: 480px) {
+      .wrap { padding-left: 1.75rem; padding-right: 1.75rem; }
+      .panel { padding: 1.75rem 1.6rem; }
     }
   </style>
 </head>
-
 <body>
   <div class="wrap">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="./index.html">← Sentral AI Legal Pages</a>
+    </nav>
+
     <header class="hero">
-      <span class="badge">Sentral AI</span>
+      <span class="badge">App name: Sentral AI</span>
       <h1>Account Deletion Request</h1>
       <p class="lede">
-        You may request deletion of your Sentral AI account and related personal data. Use the form below to email our
-        support team with a structured request.
+        You may request deletion of your Sentral AI account and related personal data by following the steps below.
       </p>
     </header>
 
-    <div class="notice" role="region" aria-label="Important information">
-      <strong>Processing.</strong> Deletion is not automatic or immediate. We review requests and respond according to
-      our operational process. We may need to verify your identity before completing deletion.
+    <div class="notice" role="region" aria-label="Processing information">
+      <strong>Processing time.</strong> Account deletion is not automatic or immediate. We review requests and handle them according to our operational process.
     </div>
+
+    <div class="notice" role="region" aria-label="Verification">
+      <strong>Identity verification.</strong> Support may verify your identity before processing a deletion request to protect your account.
+    </div>
+
+    <section class="panel" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">How to request account deletion</h2>
+      <ol>
+        <li>Send an email to <a href="mailto:support@app-bizz.com">support@app-bizz.com</a>.</li>
+        <li>Use the subject line: <strong style="color: var(--text)">Account deletion request — Sentral AI</strong> (copy it exactly so your request is routed correctly).</li>
+        <li>In the body of the email, include the <strong style="color: var(--text)">email address you use to sign in</strong> to Sentral AI.</li>
+        <li>If available, include any relevant <strong style="color: var(--text)">organization or account details</strong> that help us locate your account (for example, organization name or context from your service agreement).</li>
+      </ol>
+      <p>
+        <a class="cta" href="mailto:support@app-bizz.com?subject=Account%20deletion%20request%20%E2%80%94%20Sentral%20AI">Open email to support with subject prefilled</a>
+      </p>
+    </section>
+
+    <section class="panel" aria-labelledby="static-heading">
+      <h2 id="static-heading">Why this page does not submit through the app API</h2>
+      <p>
+        This public web page does not call the Sentral backend. The platform inquiry endpoint used inside the authenticated app requires a signed-in user token, and browser security (CORS) is not configured for static hosting on GitHub Pages. Use email or phone below so your request reaches support reliably.
+      </p>
+    </section>
 
     <section class="panel" aria-labelledby="data-del-heading">
       <h2 id="data-del-heading">What may be deleted</h2>
-      <p>Depending on your account and applicable requirements, we may delete or anonymize, where legally and
-        operationally possible:</p>
+      <p>Depending on your account and applicable requirements, we may delete or anonymize, where legally and operationally possible:</p>
       <ul>
         <li>Account and profile data</li>
         <li>Login-related account records</li>
         <li>Camera and NVR configuration</li>
-        <li>Linked cameras and related device associations</li>
-        <li>Alert settings and preferences</li>
+        <li>Linked cameras</li>
+        <li>Alert settings</li>
         <li>Schedules and mute windows</li>
-        <li>WhatsApp verification-related data tied to your account</li>
+        <li>WhatsApp verification data</li>
         <li>Support inquiries, where legally and operationally possible</li>
       </ul>
     </section>
 
     <section class="panel" aria-labelledby="data-ret-heading">
       <h2 id="data-ret-heading">What may be retained</h2>
-      <p>Some information may be kept after account deletion, including where required or permitted by law or legitimate
-        business needs, such as:</p>
+      <p>Some information may be kept after account deletion, including where required or permitted by law or legitimate business needs, such as:</p>
       <ul>
         <li>Security logs and audit records</li>
         <li>Legal, contractual, or billing records</li>
-        <li>Diagnostic or operational logs</li>
-        <li>Alert and event records needed for security, fraud prevention, dispute resolution, compliance, or platform
-          integrity</li>
+        <li>Diagnostic logs</li>
+        <li>Alert and event records needed for security, fraud prevention, dispute resolution, compliance, or platform integrity</li>
       </ul>
       <p>Retained data is kept only as long as necessary for legal, security, operational, or contractual reasons.</p>
     </section>
 
-    <section class="panel" aria-labelledby="form-heading">
-      <!-- <h2 id="form-heading">Submit a deletion request</h2> -->
-      <!-- . -->
-
-      <!-- <div id="form-error" class="status error" role="alert" hidden></div>
-      <div id="form-loading" class="status loading" role="status" aria-live="polite" hidden>Preparing your email…</div>
-      <div id="form-success" class="status success" role="status" aria-live="polite" hidden></div> -->
-
-      <!-- <form id="deletion-form" novalidate>
-        <div>
-          <label for="guestEmail">Email used to sign in <span class="hint">(required)</span></label>
-          <input id="guestEmail" name="guestEmail" type="email" autocomplete="email" required placeholder="you@example.com" />
-        </div>
-        <div>
-          <label for="guestName">Full name <span class="hint">(optional)</span></label>
-          <input id="guestName" name="guestName" type="text" autocomplete="name" placeholder="Your full name" />
-        </div>
-        <div>
-          <label for="guestPhone">Phone <span class="hint">(optional)</span></label>
-          <input id="guestPhone" name="guestPhone" type="tel" autocomplete="tel" placeholder="Including country code if applicable" />
-        </div>
-        <div>
-          <label for="subject">Subject <span class="hint">(optional; defaults for support routing)</span></label>
-          <input id="subject" name="subject" type="text" value="Account deletion request — Sentral AI" />
-        </div>
-        <div>
-          <label for="message">Message / details <span class="hint">(required)</span></label>
-          <textarea id="message" name="message" required placeholder="Confirm that you want your Sentral AI account deleted, and add any context we should know (e.g., organization name, approximate signup date)."></textarea>
-        </div>
-        <button type="submit" id="submit-btn">Open email with request</button>
-      </form> -->
-
-      <div class="fallback">
-        <!-- <strong style="color: var(--text)">Prefer to contact us directly?</strong><br /> -->
-        <strong style="color: var(--text)">contact us</strong><br />
-
-        <h2>How to request account deletion</h2>
-        <ol>
-          <li>Send an email to support@app-bizz.com</li>
-          <li>Use the subject: "Account deletion request"</li>
-          <li>Include the email address used in the app</li>
-        </ol>
-
+    <section class="panel" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
         Email: <a href="mailto:support@app-bizz.com">support@app-bizz.com</a><br />
-        Phone: <a href="tel:+972548047747" class="tel">054-804-7747</a> <span class="hint">(tap to call on
-          mobile)</span>
-        <p style="margin-bottom:0;font-size:0.85rem;margin-top:0.75rem">
-          If the button does not open your mail app, copy the request draft below and send it manually.
-        </p>
-        <pre id="copy-fallback" class="mono-block" hidden></pre>
-      </div>
+        Phone: <a href="tel:+972548047747">054-804-7747</a>
+      </p>
+      <p style="margin-bottom:0">
+        Direct link with subject prefilled:
+        <a href="mailto:support@app-bizz.com?subject=Account%20deletion%20request%20%E2%80%94%20Sentral%20AI">mailto:support@app-bizz.com?subject=Account deletion request — Sentral AI</a>
+      </p>
     </section>
 
     <footer class="meta">
-      <p style="margin:0">App name: Sentral AI</p>
-      <p style="margin:0.5rem 0 0">Last updated: May 4, 2026</p>
+      <p>App name: Sentral AI</p>
+      <p>Last updated: May 4, 2026</p>
     </footer>
   </div>
-
-  <!-- <script>
-    (function () {
-      var INQUIRY_TYPE = 'GENERAL';
-      var INQUIRY_ORIGIN = 'CONTACT_FORM';
-      var SUPPORT_EMAIL = 'support@app-bizz.com';
-      var MAX_MAILTO = 1800;
-
-      var form = document.getElementById('deletion-form');
-      var btn = document.getElementById('submit-btn');
-      var errEl = document.getElementById('form-error');
-      var loadEl = document.getElementById('form-loading');
-      var okEl = document.getElementById('form-success');
-      var copyPre = document.getElementById('copy-fallback');
-
-      function show(el, showFlag) {
-        if (!el) return;
-        el.hidden = !showFlag;
-      }
-
-      function setError(msg) {
-        errEl.textContent = msg || '';
-        show(errEl, !!msg);
-      }
-
-      function getValues() {
-        return {
-          guestEmail: (document.getElementById('guestEmail').value || '').trim(),
-          guestName: (document.getElementById('guestName').value || '').trim(),
-          guestPhone: (document.getElementById('guestPhone').value || '').trim(),
-          subject: (document.getElementById('subject').value || '').trim() || 'Account deletion request — Sentral AI',
-          message: (document.getElementById('message').value || '').trim()
-        };
-      }
-
-      function buildBody(v) {
-        var lines = [
-          'Account deletion request — Sentral AI',
-          '',
-          'This email is a request to delete my Sentral AI account and related personal data.',
-          '',
-          '--- Inquiry-style routing fields (aligns with platform inquiry payload) ---',
-          'type: ' + INQUIRY_TYPE,
-          'origin: ' + INQUIRY_ORIGIN,
-          'guestEmail: ' + v.guestEmail,
-          v.guestName ? 'guestName: ' + v.guestName : 'guestName: (not provided)',
-          v.guestPhone ? 'guestPhone: ' + v.guestPhone : 'guestPhone: (not provided)',
-          'subject: ' + v.subject,
-          '',
-          '--- Message ---',
-          v.message
-        ];
-        return lines.join('\n');
-      }
-
-      function validEmail(email) {
-        if (!email) return false;
-        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-      }
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        setError('');
-        show(okEl, false);
-        copyPre.hidden = true;
-
-        var v = getValues();
-        if (!validEmail(v.guestEmail)) {
-          setError('Please enter a valid email address.');
-          document.getElementById('guestEmail').focus();
-          return;
-        }
-        if (!v.message) {
-          setError('Please enter a message with your deletion request details.');
-          document.getElementById('message').focus();
-          return;
-        }
-
-        var body = buildBody(v);
-        var subject = v.subject;
-        var mailto =
-          'mailto:' +
-          encodeURIComponent(SUPPORT_EMAIL) +
-          '?subject=' +
-          encodeURIComponent(subject) +
-          '&body=' +
-          encodeURIComponent(body);
-
-        copyPre.textContent = 'To: ' + SUPPORT_EMAIL + '\nSubject: ' + subject + '\n\n' + body;
-
-        if (mailto.length > MAX_MAILTO) {
-          setError('Your message is too long for automatic email opening. Please shorten it or use the contact details below and paste the draft from the page source.');
-          copyPre.hidden = false;
-          return;
-        }
-
-        show(loadEl, true);
-        btn.disabled = true;
-
-        window.setTimeout(function () {
-          show(loadEl, false);
-          window.location.href = mailto;
-          okEl.innerHTML =
-            'If your email app opened, review the message and send it to complete your request. ' +
-            'If nothing opened, copy the draft in the box below and email <strong>support@app-bizz.com</strong> manually.';
-          show(okEl, true);
-          copyPre.hidden = false;
-          btn.disabled = false;
-        }, 400);
-      });
-    })();
-  </script> -->
 </body>
-
 </html>
