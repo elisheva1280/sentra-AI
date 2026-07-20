@@ -301,17 +301,20 @@
               </li>
               <li>
                 <strong>Analytics and app usage data:</strong> the app uses
-                Google Firebase Analytics to understand how the app is used and
-                to improve stability and usability. Firebase Analytics
-                automatically collects a randomly generated app instance
-                identifier, session start and session duration events, screens
-                and features viewed, app open, install, update and crash-related
-                events, and technical information such as device model,
-                operating system version, app version, language, and approximate
-                location derived from IP address (country/region level).
-                Analytics data is not used for advertising, is not linked to
-                advertising identifiers (IDFA/GAID), and is not used for
-                cross-app tracking.
+                analytics and app-performance services, currently Google
+                Firebase Analytics, to understand how the app is used and to
+                improve its stability, performance, and usability. This may
+                include:
+                <ul>
+                  <li><strong>Usage and interaction data</strong> &mdash; such as sessions, screens or features viewed, actions taken in the app, and app open, install, or update events.</li>
+                  <li><strong>Technical and device data</strong> &mdash; such as device model, operating system version, app version, language, and approximate location derived from IP address (country or region level).</li>
+                  <li><strong>Stability and performance data</strong> &mdash; such as errors, crashes, and performance measurements.</li>
+                  <li><strong>Pseudonymous identifiers</strong> &mdash; such as a randomly generated app instance identifier used to group events from the same installation.</li>
+                </ul>
+                The specific events we measure may change over time as we
+                improve the app. Analytics data is never used for advertising,
+                is not linked to advertising identifiers (IDFA/GAID), and is not
+                used for cross-app tracking.
               </li>
             </ul>
             <div class="chips" aria-label="Data category summary">
@@ -341,7 +344,7 @@
               <li><strong>Snapshots and media:</strong> preview images, snapshots, and related event media where applicable. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>App interactions and settings:</strong> app usage and user-configured settings. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Operational and diagnostic data:</strong> logs used for service maintenance, reliability, and security. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
-              <li><strong>Analytics / app performance data:</strong> app instance identifier, session and screen-view events, app version, device model, OS version, and approximate (country-level) location derived from IP address, collected through Google Firebase Analytics. This information is used for analytics and app performance, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
+              <li><strong>Analytics / app performance data:</strong> app usage and interaction data, technical and device information, stability and performance data, and pseudonymous installation identifiers. This information is used for analytics and app performance, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
             </ul>
             <p>
               We do not sell personal information. The app is not designed to use
@@ -364,7 +367,7 @@
               <li>List and display notifications, alerts, event records, snapshots, and available event media.</li>
               <li>Send WhatsApp alert notifications to a number you choose to verify through an optional, user-initiated process.</li>
               <li>Operate, secure, troubleshoot, and improve the reliability of the app and supporting services.</li>
-              <li>Measure aggregated app usage, feature adoption, stability, and performance through Firebase Analytics, so we can fix problems and improve the app experience.</li>
+              <li>Measure aggregated app usage, feature adoption, stability, and performance through analytics services, so we can fix problems and improve the app experience.</li>
               <li>Respond to support inquiries, including NVR setup and connection diagnostics submitted by the customer.</li>
             </ul>
           </section>
@@ -394,9 +397,11 @@
                 <strong>NVR and camera integration services:</strong> camera and NVR connection details are processed by backend services that connect to your NVR device to retrieve device status, channel lists, snapshots, and alert data.
               </li>
               <li>
-                <strong>Google (Firebase):</strong> Firebase Analytics is used to collect aggregated app usage and performance data,
+                <strong>Analytics and messaging providers &mdash; currently Google (Firebase):</strong>
+                Firebase Analytics is used to collect aggregated app usage and performance data,
                 and Firebase Cloud Messaging is used to deliver push notifications to your device.
-                Google processes this data as our service provider. See the
+                Google processes this data as our service provider. We may use additional or alternative
+                analytics providers in the future, under equivalent terms. See the
                 <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a> information and the
                 <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
               </li>
@@ -410,15 +415,24 @@
           <section aria-labelledby="analytics">
             <h2 id="analytics">Analytics and Your Choices</h2>
             <p>
-              We use Google Firebase Analytics to understand, in aggregate, how the
-              app is used, which features are used, and where errors or performance
-              problems occur. Analytics is used for product improvement only.
+              We use analytics and app-performance services, currently Google
+              Firebase Analytics, to understand in aggregate how the app is
+              used, which features are used, and where errors or performance
+              problems occur. Analytics is used for product improvement,
+              reliability, and security only.
+            </p>
+            <p>
+              As the app evolves, we may add, change, or remove the specific
+              events and measurements we collect, and we may use additional or
+              alternative analytics providers. Any such changes remain subject
+              to the commitments below.
             </p>
             <ul>
-              <li><strong>No advertising or tracking:</strong> analytics data is not used to serve ads, is not linked to advertising identifiers, and is not shared with advertising networks or data brokers.</li>
-              <li><strong>Pseudonymous identifiers:</strong> analytics events are associated with a randomly generated app instance identifier rather than your name. Resetting or reinstalling the app generates a new identifier.</li>
-              <li><strong>No sensitive content:</strong> we do not send camera images, snapshots, video, alert content, NVR credentials, or WhatsApp message content to analytics.</li>
-              <li><strong>Retention:</strong> analytics event data is retained according to the retention period configured in Firebase and is deleted or aggregated after that period.</li>
+              <li><strong>Product improvement only:</strong> we use analytics to improve, secure, and troubleshoot the app &mdash; not to make decisions about individual users.</li>
+              <li><strong>No advertising or tracking:</strong> analytics data is not used to serve ads, is not linked to advertising identifiers, is not used for cross-app tracking, and is not sold or shared with advertising networks or data brokers.</li>
+              <li><strong>Pseudonymous by default:</strong> analytics events are associated with a randomly generated installation identifier rather than your name. Reinstalling the app generates a new identifier.</li>
+              <li><strong>No sensitive content:</strong> we do not send camera images, snapshots, video, alert media, NVR credentials, or WhatsApp message content to analytics providers.</li>
+              <li><strong>Retention:</strong> analytics event data is retained according to the retention period configured with our analytics provider, after which it is deleted or retained only in aggregated form.</li>
               <li><strong>Your choices:</strong> you can limit analytics collection through your device operating system privacy settings, or by uninstalling the app. You may also contact us at <a href="mailto:support@app-bizz.com">support@app-bizz.com</a> to request that analytics data associated with your app installation be deleted.</li>
             </ul>
           </section>
@@ -451,7 +465,7 @@
               <li><strong>NVR and camera configuration and credentials</strong> may be retained as needed to connect and operate supported devices and to support service and security functions, depending on configuration and operational requirements.</li>
               <li><strong>Alert, event, snapshot, and media records</strong> may be retained as needed for service operation, security, compliance, and dispute handling.</li>
               <li><strong>Diagnostics and security logs</strong> may be retained as needed to monitor, maintain, and protect the service.</li>
-              <li><strong>Analytics event data</strong> is retained according to the retention period configured in Google Firebase, after which it is deleted or retained only in aggregated form.</li>
+              <li><strong>Analytics event data</strong> is retained according to the retention period configured with our analytics provider, after which it is deleted or retained only in aggregated form.</li>
               <li><strong>Support and deletion requests</strong> may be retained as needed to process requests, provide support, and maintain required records.</li>
             </ul>
             <p>
