@@ -213,7 +213,7 @@
 
         <div class="content">
           <div class="notice">
-            <strong>Last Updated:</strong> May 4, 2026.
+            <strong>Last Updated:</strong> July 20, 2026.
             This Privacy Policy describes how Sentra AI handles information when you use the mobile app.
             For account deletion instructions, see the
             <a href="./delete-account.html">Account Deletion Request</a> page.
@@ -299,6 +299,20 @@
                 operational logs may be collected to maintain, secure, and
                 improve the service.
               </li>
+              <li>
+                <strong>Analytics and app usage data:</strong> the app uses
+                Google Firebase Analytics to understand how the app is used and
+                to improve stability and usability. Firebase Analytics
+                automatically collects a randomly generated app instance
+                identifier, session start and session duration events, screens
+                and features viewed, app open, install, update and crash-related
+                events, and technical information such as device model,
+                operating system version, app version, language, and approximate
+                location derived from IP address (country/region level).
+                Analytics data is not used for advertising, is not linked to
+                advertising identifiers (IDFA/GAID), and is not used for
+                cross-app tracking.
+              </li>
             </ul>
             <div class="chips" aria-label="Data category summary">
               <span class="chip">Account</span>
@@ -311,6 +325,7 @@
               <span class="chip">Schedules / Mute Windows</span>
               <span class="chip">Detection Masks</span>
               <span class="chip">Operational Diagnostics</span>
+              <span class="chip">Analytics / App Usage</span>
             </div>
           </section>
 
@@ -326,6 +341,7 @@
               <li><strong>Snapshots and media:</strong> preview images, snapshots, and related event media where applicable. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>App interactions and settings:</strong> app usage and user-configured settings. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Operational and diagnostic data:</strong> logs used for service maintenance, reliability, and security. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
+              <li><strong>Analytics / app performance data:</strong> app instance identifier, session and screen-view events, app version, device model, OS version, and approximate (country-level) location derived from IP address, collected through Google Firebase Analytics. This information is used for analytics and app performance, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
             </ul>
             <p>
               We do not sell personal information. The app is not designed to use
@@ -348,6 +364,7 @@
               <li>List and display notifications, alerts, event records, snapshots, and available event media.</li>
               <li>Send WhatsApp alert notifications to a number you choose to verify through an optional, user-initiated process.</li>
               <li>Operate, secure, troubleshoot, and improve the reliability of the app and supporting services.</li>
+              <li>Measure aggregated app usage, feature adoption, stability, and performance through Firebase Analytics, so we can fix problems and improve the app experience.</li>
               <li>Respond to support inquiries, including NVR setup and connection diagnostics submitted by the customer.</li>
             </ul>
           </section>
@@ -376,11 +393,34 @@
               <li>
                 <strong>NVR and camera integration services:</strong> camera and NVR connection details are processed by backend services that connect to your NVR device to retrieve device status, channel lists, snapshots, and alert data.
               </li>
+              <li>
+                <strong>Google (Firebase):</strong> Firebase Analytics is used to collect aggregated app usage and performance data,
+                and Firebase Cloud Messaging is used to deliver push notifications to your device.
+                Google processes this data as our service provider. See the
+                <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a> information and the
+                <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
+              </li>
             </ul>
             <p>
               Data may be processed in countries where these service providers operate.
               Where applicable laws require safeguards for international data transfers, we rely on contractual and organizational measures consistent with those requirements.
             </p>
+          </section>
+
+          <section aria-labelledby="analytics">
+            <h2 id="analytics">Analytics and Your Choices</h2>
+            <p>
+              We use Google Firebase Analytics to understand, in aggregate, how the
+              app is used, which features are used, and where errors or performance
+              problems occur. Analytics is used for product improvement only.
+            </p>
+            <ul>
+              <li><strong>No advertising or tracking:</strong> analytics data is not used to serve ads, is not linked to advertising identifiers, and is not shared with advertising networks or data brokers.</li>
+              <li><strong>Pseudonymous identifiers:</strong> analytics events are associated with a randomly generated app instance identifier rather than your name. Resetting or reinstalling the app generates a new identifier.</li>
+              <li><strong>No sensitive content:</strong> we do not send camera images, snapshots, video, alert content, NVR credentials, or WhatsApp message content to analytics.</li>
+              <li><strong>Retention:</strong> analytics event data is retained according to the retention period configured in Firebase and is deleted or aggregated after that period.</li>
+              <li><strong>Your choices:</strong> you can limit analytics collection through your device operating system privacy settings, or by uninstalling the app. You may also contact us at <a href="mailto:support@app-bizz.com">support@app-bizz.com</a> to request that analytics data associated with your app installation be deleted.</li>
+            </ul>
           </section>
 
           <section aria-labelledby="security">
@@ -411,6 +451,7 @@
               <li><strong>NVR and camera configuration and credentials</strong> may be retained as needed to connect and operate supported devices and to support service and security functions, depending on configuration and operational requirements.</li>
               <li><strong>Alert, event, snapshot, and media records</strong> may be retained as needed for service operation, security, compliance, and dispute handling.</li>
               <li><strong>Diagnostics and security logs</strong> may be retained as needed to monitor, maintain, and protect the service.</li>
+              <li><strong>Analytics event data</strong> is retained according to the retention period configured in Google Firebase, after which it is deleted or retained only in aggregated form.</li>
               <li><strong>Support and deletion requests</strong> may be retained as needed to process requests, provide support, and maintain required records.</li>
             </ul>
             <p>
@@ -475,7 +516,7 @@
           </section>
 
           <footer class="doc-footer">
-            <span>Last Updated: May 4, 2026</span>
+            <span>Last Updated: July 20, 2026</span>
             <span>Sentra AI Mobile App Privacy Policy</span>
           </footer>
         </div>
