@@ -213,7 +213,7 @@
 
         <div class="content">
           <div class="notice">
-            <strong>Last Updated:</strong> July 20, 2026.
+            <strong>Last Updated:</strong> July 27, 2026.
             This Privacy Policy describes how Sentra AI handles information when you use the mobile app.
             For account deletion instructions, see the
             <a href="./delete-account.html">Account Deletion Request</a> page.
@@ -237,6 +237,16 @@
             </p>
           </section>
 
+          <section aria-labelledby="controller">
+            <h2 id="controller">Data Controller</h2>
+            <p>
+              Bizz Technologies Ltd<br />
+              17 Nachum Hafzadi, Jerusalem 9548400, Israel<br />
+              Email: <a href="mailto:support@app-bizz.com">support@app-bizz.com</a><br />
+              Phone: <a href="tel:+972548047747">+972-54-804-7747</a>
+            </p>
+          </section>
+
           <section aria-labelledby="collect">
             <h2 id="collect">Information We Collect</h2>
             <ul>
@@ -254,13 +264,12 @@
               <li>
                 <strong>Phone and WhatsApp data:</strong> a phone number if you
                 choose to link WhatsApp for alerts, and related verification
-                status. WhatsApp verification is initiated by the user. When
-                the user chooses to verify a number, they are redirected to
-                WhatsApp where they can send a verification message. This
-                process is optional and requires user action. All WhatsApp
-                usage is opt-in. The user connects a verified phone number,
-                and notifications are sent only to that number. We do not
-                access WhatsApp messages or chat content.
+                status. We may prompt you once, after your first sign-in, to
+                link a WhatsApp number. You can skip this, and verification
+                only proceeds if you choose to send the verification message.
+                All WhatsApp usage is opt-in. The user connects a verified
+                phone number, and notifications are sent only to that number.
+                We do not access WhatsApp messages or chat content.
               </li>
               <li>
                 <strong>Camera and NVR connection data:</strong> NVR/site names,
@@ -289,10 +298,18 @@
                 last-snapshot URLs returned by the backend. Notification and
                 event records also include snapshot image IDs, temporary image
                 URLs, and event/video media identifiers where available. The
-                app does not request access to the phone camera, microphone,
-                contacts, or local photo library. All media is provided by
-                customer-owned NVR systems and is not captured by the mobile
-                device.
+                app does not request access to the phone camera, microphone, or
+                contacts. Photo library access is used only when you choose to
+                save or share an alert image or video from the app. All media
+                is provided by customer-owned NVR systems and is not captured
+                by the mobile device.
+              </li>
+              <li>
+                <strong>Contact details you provide about others:</strong> if you
+                add emergency or notification contacts, you provide their name,
+                phone number and email address. You are responsible for ensuring
+                you may share their details with us. We use this information only
+                to deliver alerts you have configured.
               </li>
               <li>
                 <strong>Operational and diagnostic data:</strong> diagnostic and
@@ -308,13 +325,11 @@
                 <ul>
                   <li><strong>Usage and interaction data</strong> &mdash; such as sessions, screens or features viewed, actions taken in the app, and app open, install, or update events.</li>
                   <li><strong>Technical and device data</strong> &mdash; such as device model, operating system version, app version, language, and approximate location derived from IP address (country or region level).</li>
-                  <li><strong>Stability and performance data</strong> &mdash; such as errors, crashes, and performance measurements.</li>
-                  <li><strong>Pseudonymous identifiers</strong> &mdash; such as a randomly generated app instance identifier used to group events from the same installation.</li>
+                  <li><strong>Identifiers</strong> &mdash; analytics events are associated with your account identifier and with a randomly generated installation identifier. We do not send your name, email address, phone number, camera imagery, or device credentials to our analytics provider.</li>
                 </ul>
                 The specific events we measure may change over time as we
-                improve the app. Analytics data is never used for advertising,
-                is not linked to advertising identifiers (IDFA/GAID), and is not
-                used for cross-app tracking.
+                improve the app. We do not use advertising identifiers, and we
+                do not use your data for advertising or cross-app tracking.
               </li>
             </ul>
             <div class="chips" aria-label="Data category summary">
@@ -344,7 +359,7 @@
               <li><strong>Snapshots and media:</strong> preview images, snapshots, and related event media where applicable. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>App interactions and settings:</strong> app usage and user-configured settings. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Operational and diagnostic data:</strong> logs used for service maintenance, reliability, and security. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
-              <li><strong>Analytics / app performance data:</strong> app usage and interaction data, technical and device information, stability and performance data, and pseudonymous installation identifiers. This information is used for analytics and app performance, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
+              <li><strong>Analytics / app usage data:</strong> app usage and interaction data, technical and device information, your account identifier, and a randomly generated installation identifier. This information is used for analytics, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
             </ul>
             <p>
               We do not sell personal information. The app is not designed to use
@@ -381,7 +396,10 @@
             </p>
             <ul>
               <li>
-                <strong>Authentication provider:</strong> used for sign-in, password reset, and account access management.
+                <strong>Amazon Web Services (Cognito):</strong> used for sign-in, password reset, and
+                session management. When you reset your password, your email address, verification code,
+                and new password are sent directly from the app to AWS. Processed in AWS region
+                il-central-1 (Israel).
               </li>
               <li>
                 <strong>Sentra AI backend API</strong> (<a href="https://backend.x-sentral.com">backend.x-sentral.com</a>):
@@ -398,7 +416,7 @@
               </li>
               <li>
                 <strong>Analytics and messaging providers &mdash; currently Google (Firebase):</strong>
-                Firebase Analytics is used to collect aggregated app usage and performance data,
+                Firebase Analytics is used to collect app usage data,
                 and Firebase Cloud Messaging is used to deliver push notifications to your device.
                 Google processes this data as our service provider. We may use additional or alternative
                 analytics providers in the future, under equivalent terms. See the
@@ -429,8 +447,7 @@
             </p>
             <ul>
               <li><strong>Product improvement only:</strong> we use analytics to improve, secure, and troubleshoot the app &mdash; not to make decisions about individual users.</li>
-              <li><strong>No advertising or tracking:</strong> analytics data is not used to serve ads, is not linked to advertising identifiers, is not used for cross-app tracking, and is not sold or shared with advertising networks or data brokers.</li>
-              <li><strong>Pseudonymous by default:</strong> analytics events are associated with a randomly generated installation identifier rather than your name. Reinstalling the app generates a new identifier.</li>
+              <li><strong>No advertising or tracking:</strong> we do not use advertising identifiers, and we do not use your data for advertising or cross-app tracking. Analytics data is not sold or shared with advertising networks or data brokers.</li>
               <li><strong>No sensitive content:</strong> we do not send camera images, snapshots, video, alert media, NVR credentials, or WhatsApp message content to analytics providers.</li>
               <li><strong>Retention:</strong> analytics event data is retained according to the retention period configured with our analytics provider, after which it is deleted or retained only in aggregated form.</li>
               <li><strong>Your choices:</strong> you can limit analytics collection through your device operating system privacy settings, or by uninstalling the app. You may also contact us at <a href="mailto:support@app-bizz.com">support@app-bizz.com</a> to request that analytics data associated with your app installation be deleted.</li>
@@ -448,7 +465,8 @@
               <li><strong>Data in transit:</strong> communication between the mobile app and service APIs is protected using HTTPS (TLS).</li>
               <li><strong>Authentication:</strong> authenticated access controls are used to protect account and service access.</li>
               <li><strong>Session protection:</strong> session information is stored using secure platform capabilities available on the device.</li>
-              <li><strong>NVR credentials:</strong> NVR usernames, passwords, IP addresses, and ports are provided by users or administrators to connect supported devices and operate the service. Access to such information is limited to systems and processes required to operate the service.</li>
+              <li><strong>NVR credentials:</strong> device connection details, including NVR usernames and passwords, IP addresses and ports, are stored on our servers so the service can connect to your equipment. Access is restricted to the systems and personnel required to operate the service.</li>
+              <li><strong>Local alert cache:</strong> recent alert notifications, including their titles and text, are cached in app storage on your device so you can view them offline. This cache is limited in size, is excluded from device cloud backup on Android, and is cleared when you sign out or uninstall the app.</li>
             </ul>
             
           </section>
@@ -483,7 +501,7 @@
             <h2 id="rights">User Rights and Deletion Requests</h2>
             <p>
               Where applicable privacy laws grant rights, customers may request access, correction,
-              deactivation, or deletion of personal information associated with the account,
+              or deletion of personal information associated with the account,
               subject to verified identity where required and lawful exceptions (including retention needed for security,
               legal obligations, contractual or billing obligations, dispute resolution, or continued operation of our services).
             </p>
@@ -530,7 +548,7 @@
           </section>
 
           <footer class="doc-footer">
-            <span>Last Updated: July 20, 2026</span>
+            <span>Last Updated: July 27, 2026</span>
             <span>Sentra AI Mobile App Privacy Policy</span>
           </footer>
         </div>
