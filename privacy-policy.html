@@ -213,7 +213,7 @@
 
         <div class="content">
           <div class="notice">
-            <strong>Last Updated:</strong> August 11, 2026.
+            <strong>Last Updated:</strong> October 11, 2026.
             This Privacy Policy describes how Sentra AI handles information when you use the mobile app.
             For account deletion instructions, see the
             <a href="./delete-account.html">Account Deletion Request</a> page.
@@ -224,10 +224,12 @@
             <p>
               Sentra AI provides a customer-facing mobile application for
               managing connected NVR and camera alert systems. The app lets
-              customers sign in, view connected NVR cameras, manage linked
+              customers sign in with an email address or a mobile phone number,
+              view connected NVR cameras, manage linked
               cameras, configure camera alert behavior, set mute schedules,
               choose detection classes and mask areas, view alert information,
-              and verify a WhatsApp number for alert notifications.
+              verify a WhatsApp number for alert notifications, and get help
+              from an AI support assistant in the app.
             </p>
             <p>
               This Privacy Policy applies to the Sentra AI mobile app and the
@@ -251,10 +253,27 @@
             <h2 id="collect">Information We Collect</h2>
             <ul>
               <li>
-                <strong>Account and login data:</strong> email address,
+                <strong>Account and login data:</strong> email address and/or
+                mobile phone number (depending on how you sign up),
                 account identifiers, display name, organization/account ID,
                 and sign-in/session information. The app also uses email for
-                password reset flows.
+                password reset flows. You can add an email address to an
+                account created with a phone number, or a sign-in phone number
+                to an account created with an email address; each addition is
+                confirmed with a verification code.
+              </li>
+              <li>
+                <strong>Phone number for sign-in (SMS):</strong> if you sign up
+                or sign in with a mobile phone number, we collect that number as
+                your account identifier and send a one-time verification code to
+                it by SMS. SMS sign-in is available only in supported countries.
+                If you sign up with a phone number and do not provide a name,
+                your phone number is used as your display name until you add
+                one. Your display name is visible to support personnel who
+                serve your account and may appear in the names of WhatsApp
+                alert groups. Signing in by SMS does not link WhatsApp: WhatsApp
+                alerts are sent only after you separately verify a number for
+                WhatsApp, as described below.
               </li>
               <li>
                 <strong>Authentication and session data:</strong> authentication
@@ -323,6 +342,13 @@
                 to deliver alerts you have configured.
               </li>
               <li>
+                <strong>Support chat data:</strong> if you use the in-app AI
+                support assistant, we process the messages you write, the
+                history of the current conversation, and the account
+                information needed to answer you. See
+                <a href="#support-chat">AI Support Chat</a>.
+              </li>
+              <li>
                 <strong>Operational and diagnostic data:</strong> diagnostic and
                 operational logs may be collected to maintain, secure, and
                 improve the service.
@@ -330,13 +356,13 @@
               <li>
                 <strong>Analytics and app usage data:</strong> the app uses
                 analytics and app-performance services, currently Google
-                Firebase Analytics, to understand how the app is used and to
+                Firebase Analytics and PostHog, to understand how the app is used and to
                 improve its stability, performance, and usability. This may
                 include:
                 <ul>
                   <li><strong>Usage and interaction data</strong> &mdash; such as sessions, screens or features viewed, actions taken in the app, and app open, install, or update events.</li>
                   <li><strong>Technical and device data</strong> &mdash; such as device model, operating system version, app version, language, and approximate location derived from IP address (country or region level).</li>
-                  <li><strong>Identifiers</strong> &mdash; analytics events are associated with your account identifier and with a randomly generated installation identifier. We do not send your name, email address, phone number, camera imagery, or device credentials to our analytics provider.</li>
+                  <li><strong>Identifiers</strong> &mdash; analytics events are associated with your account identifier and with a randomly generated installation identifier. Events sent to PostHog are also associated with a randomly generated device identifier and with your device's push notification token, so that different devices using the same account can be told apart. We do not send your name, email address, phone number, camera imagery, or device credentials to our analytics provider.</li>
                 </ul>
                 The specific events we measure may change over time as we
                 improve the app. We do not use advertising identifiers, and we
@@ -347,6 +373,7 @@
               <span class="chip">Account</span>
               <span class="chip">Authentication</span>
               <span class="chip">Email</span>
+              <span class="chip">Phone Sign-In (SMS)</span>
               <span class="chip">Phone / WhatsApp</span>
               <span class="chip">Camera / NVR</span>
               <span class="chip">NVR Setup Images</span>
@@ -354,6 +381,7 @@
               <span class="chip">Notifications</span>
               <span class="chip">Schedules / Mute Windows</span>
               <span class="chip">Detection Masks</span>
+              <span class="chip">Support Chat</span>
               <span class="chip">Operational Diagnostics</span>
               <span class="chip">Analytics / App Usage</span>
             </div>
@@ -395,20 +423,63 @@
             </p>
           </section>
 
+          <section aria-labelledby="support-chat">
+            <h2 id="support-chat">AI Support Chat</h2>
+            <p>
+              The app includes an optional support chat with an AI assistant
+              (Alex). When you use it, your messages are sent to Sentra AI
+              servers and passed to the Google Gemini API to generate replies.
+            </p>
+            <ul>
+              <li>
+                <strong>What is processed:</strong> the messages you write, the
+                history of the current conversation (sent with each message),
+                and information from your account that is relevant to your
+                request &mdash; for example NVR, camera, connection-status,
+                alert, and statistics data.
+              </li>
+              <li>
+                <strong>Why:</strong> to answer your questions, help you
+                troubleshoot, and carry out actions you ask for in your account.
+                A record of actions the assistant performs (action type, status,
+                and a summary) is kept with your account records.
+              </li>
+              <li>
+                <strong>Third party:</strong> we use the Google Gemini API.
+                Under Google's paid services terms, this data is not used to
+                train Google's models. We take steps to mask device passwords
+                and similar secrets in account data before it is sent to the
+                model. Text you type is sent as written, so please do not type
+                passwords or other sensitive information that is not needed.
+                See the
+                <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
+              </li>
+              <li>
+                <strong>Storage:</strong> your past conversations (up to the 20
+                most recent) are saved on your device so you can reopen them;
+                our servers do not keep a chat history. Short-lived
+                conversation and task state is kept on our servers for a limited
+                time (from about 15 minutes up to 24 hours, depending on the
+                task) so that multi-step requests can be completed.
+              </li>
+            </ul>
+          </section>
+
           <section aria-labelledby="datasafety">
             <h2 id="datasafety">Data Safety Summary</h2>
             <p>
               The categories below summarize types of information the service may collect or process depending on how you use Sentra AI. This summary aligns app store data safety disclosures with this policy.
             </p>
             <ul>
-              <li><strong>Account information:</strong> email address, account/user IDs, display name, organization ID. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
-              <li><strong>Phone / WhatsApp number:</strong> if you choose to use WhatsApp verification. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
+              <li><strong>Account information:</strong> email address and/or phone number, account/user IDs, display name, organization ID. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
+              <li><strong>Phone number:</strong> if you sign up or sign in with a phone number (as your account identifier and for SMS verification codes), or if you choose to use WhatsApp verification. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Camera and NVR configuration:</strong> connection and configuration information for supported devices. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Snapshots and media:</strong> preview images, snapshots, and related event media where applicable. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Photos you provide during NVR setup:</strong> an image captured with the device camera or selected from the photo library, used only to extract NVR connection details. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
+              <li><strong>Support chat messages:</strong> messages you write to the in-app AI support assistant, processed to answer your request. This information is used for app functionality and customer support and transmitted securely using HTTPS/TLS.</li>
               <li><strong>App interactions and settings:</strong> app usage and user-configured settings. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
               <li><strong>Operational and diagnostic data:</strong> logs used for service maintenance, reliability, and security. This information is used for app functionality and transmitted securely using HTTPS/TLS.</li>
-              <li><strong>Analytics / app usage data:</strong> app usage and interaction data, technical and device information, your account identifier, and a randomly generated installation identifier. This information is used for analytics, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
+              <li><strong>Analytics / app usage data:</strong> app usage and interaction data, technical and device information, your account identifier, randomly generated installation and device identifiers, and (for PostHog) your device's push notification token. This information is used for analytics, is transmitted securely using HTTPS/TLS, and is not used for advertising or cross-app tracking.</li>
             </ul>
             <p>
               We do not sell personal information. The app is not designed to use
@@ -422,7 +493,7 @@
           <section aria-labelledby="use">
             <h2 id="use">How We Use Information</h2>
             <ul>
-              <li>Authenticate users, maintain sessions, and protect account access.</li>
+              <li>Authenticate users, maintain sessions, and protect account access, including sending one-time SMS verification codes when you sign in with a phone number.</li>
               <li>Create, link, or validate customer profiles and organization access.</li>
               <li>Display customer NVRs, cameras, linked cameras, camera status, and camera preview images.</li>
               <li>Connect, scan, activate, sync, and manage NVRs and related camera channels.</li>
@@ -434,6 +505,7 @@
               <li>Measure aggregated app usage, feature adoption, stability, and performance through analytics services, so we can fix problems and improve the app experience.</li>
               <li>Extract NVR connection details from an image you choose to provide during NVR setup, so you do not have to type them manually.</li>
               <li>Respond to support inquiries, including NVR setup and connection diagnostics submitted by the customer.</li>
+              <li>Answer your questions and carry out actions you request through the in-app AI support assistant.</li>
             </ul>
           </section>
 
@@ -446,14 +518,16 @@
             </p>
             <ul>
               <li>
-                <strong>Amazon Web Services (Cognito):</strong> used for sign-in, password reset, and
-                session management. When you reset your password, your email address, verification code,
-                and new password are sent directly from the app to AWS. Processed in AWS region
+                <strong>Amazon Web Services (Cognito and SNS):</strong> used for sign-in, password reset,
+                SMS verification, and session management. When you reset your password, your email address,
+                verification code, and new password are sent directly from the app to AWS. When you sign in
+                with a phone number, your phone number and verification code are sent to AWS, and the code
+                is delivered to your phone by SMS through Amazon SNS. Processed in AWS region
                 il-central-1 (Israel).
               </li>
               <li>
                 <strong>Sentra AI backend API</strong> (<a href="https://backend.x-sentral.com">backend.x-sentral.com</a>):
-                processes customer profile, camera, NVR, notification, schedule, detection, mask, event, WhatsApp-linking, and related operational data as described in this policy.
+                processes customer profile, camera, NVR, notification, schedule, detection, mask, event, WhatsApp-linking, support chat, and related operational data as described in this policy.
               </li>
               <li>
                 <strong>WhatsApp:</strong> used as an opt-in notification delivery channel for messages sent to a user-verified phone number.
@@ -467,8 +541,11 @@
               <li>
                 <strong>Google Gemini API:</strong> if you add an NVR from an
                 image, that image is sent to the Google Gemini API to identify
-                the connection details it contains. Under Google's paid services
-                terms, the images are not used to train Google's models. See the
+                the connection details it contains. If you use the in-app AI
+                support assistant, your messages and related account information
+                are sent to the Google Gemini API to generate replies (see
+                <a href="#support-chat">AI Support Chat</a>). Under Google's paid services
+                terms, this data is not used to train Google's models. See the
                 <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
               </li>
               <li>
@@ -477,13 +554,15 @@
                 our AWS S3 storage.
               </li>
               <li>
-                <strong>Analytics and messaging providers &mdash; currently Google (Firebase):</strong>
-                Firebase Analytics is used to collect app usage data,
+                <strong>Analytics and messaging providers &mdash; currently Google (Firebase) and PostHog:</strong>
+                Firebase Analytics and PostHog are used to collect app usage data,
                 and Firebase Cloud Messaging is used to deliver push notifications to your device.
-                Google processes this data as our service provider. We may use additional or alternative
+                PostHog data is processed in PostHog's EU cloud region.
+                Google and PostHog process this data as our service providers. We may use additional or alternative
                 analytics providers in the future, under equivalent terms. See the
-                <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a> information and the
-                <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
+                <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy and Security</a> information, the
+                <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>, and the
+                <a href="https://posthog.com/privacy" rel="noopener">PostHog Privacy Policy</a>.
               </li>
             </ul>
             <p>
@@ -496,7 +575,7 @@
             <h2 id="analytics">Analytics and Your Choices</h2>
             <p>
               We use analytics and app-performance services, currently Google
-              Firebase Analytics, to understand in aggregate how the app is
+              Firebase Analytics and PostHog, to understand in aggregate how the app is
               used, which features are used, and where errors or performance
               problems occur. Analytics is used for product improvement,
               reliability, and security only.
@@ -512,7 +591,7 @@
               <li><strong>No advertising or tracking:</strong> we do not use advertising identifiers, and we do not use your data for advertising or cross-app tracking. Analytics data is not sold or shared with advertising networks or data brokers.</li>
               <li><strong>No sensitive content:</strong> we do not send camera images, snapshots, video, alert media, NVR credentials, or WhatsApp message content to analytics providers.</li>
               <li><strong>Retention:</strong> analytics event data is retained according to the retention period configured with our analytics provider, after which it is deleted or retained only in aggregated form.</li>
-              <li><strong>Your choices:</strong> you can limit analytics collection through your device operating system privacy settings, or by uninstalling the app. You may also contact us at <a href="mailto:support@sentraai.ai">support@sentraai.ai</a> to request that analytics data associated with your app installation be deleted.</li>
+              <li><strong>Your choices:</strong> you can turn analytics off at any time in the app under <strong>Settings → Share usage data</strong>; this stops collection by both Firebase Analytics and PostHog on that device. You can also limit analytics collection through your device operating system privacy settings, or by uninstalling the app. You may also contact us at <a href="mailto:support@sentraai.ai">support@sentraai.ai</a> to request that analytics data associated with your app installation be deleted.</li>
             </ul>
           </section>
 
@@ -557,6 +636,7 @@
               <li><strong>NVR and camera configuration and credentials</strong> may be retained as needed to connect and operate supported devices and to support service and security functions, depending on configuration and operational requirements.</li>
               <li><strong>Images provided during NVR setup</strong> are stored in our AWS S3 storage and may be retained as needed to complete setup, support the device connection, and handle service or security issues.</li>
               <li><strong>Alert, event, snapshot, and media records</strong> may be retained as needed for service operation, security, compliance, and dispute handling.</li>
+              <li><strong>Support chat conversations</strong> are saved on your device (up to the 20 most recent) and are not kept as a chat history on our servers; short-lived conversation and task state on our servers expires within about 15 minutes to 24 hours, and records of actions the assistant performed are retained with your account records.</li>
               <li><strong>Diagnostics and security logs</strong> may be retained as needed to monitor, maintain, and protect the service.</li>
               <li><strong>Analytics event data</strong> is retained according to the retention period configured with our analytics provider, after which it is deleted or retained only in aggregated form.</li>
               <li><strong>Support and deletion requests</strong> may be retained as needed to process requests, provide support, and maintain required records.</li>
@@ -586,7 +666,7 @@
             <ul>
               <li>In the Sentra AI mobile app, open <strong>Settings → Delete Account</strong> while signed in — this submits a routed deletion request through your authenticated profile.</li>
               <li>Use the public <a href="./delete-account.html">Account Deletion Request</a> page or email workflow.</li>
-              <li>Email <a href="mailto:support@sentraai.ai">support@sentraai.ai</a>, including the email address you use to sign in.</li>
+              <li>Email <a href="mailto:support@sentraai.ai">support@sentraai.ai</a>, including the email address or phone number you use to sign in.</li>
             </ul>
             <p>
               <strong>Processing timeframe.</strong> We aim to process verified deletion requests within 30 days, unless a longer period is required or permitted by law,
@@ -623,7 +703,7 @@
           </section>
 
           <footer class="doc-footer">
-            <span>Last Updated: August 11, 2026</span>
+            <span>Last Updated: October 11, 2026</span>
             <span>Sentra AI Mobile App Privacy Policy</span>
           </footer>
         </div>
